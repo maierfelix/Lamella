@@ -39,6 +39,7 @@ CORE.Grid = function() {
   /**
    * Model type control
    * @type {Object}
+   * @default {}
    */
   this.models = {};
 
@@ -378,6 +379,51 @@ CORE.Grid.prototype.getDevicePlatform = function() {
   if (ios) {
     return (this.device = "ios");
   }
+
+  return void 0;
+
+};
+
+/**
+ * Stress test
+ * @param {Number} n
+ * @method stressTest
+ */
+CORE.Grid.prototype.stressTest = function(n) {
+
+  n = n || 100;
+
+  var ii = 0;
+
+  var entity = {
+    id: 0,
+    width: 32,
+    height: 32,
+    color: "#FFF",
+    model: "DataType",
+    value: "",
+    x: 0,
+    y: 0,
+    connections: []
+  };
+
+  this.layers[1] = [];
+
+  for (ii = 0; ii < n; ++ii) {
+    entity.id = ii;
+    entity.x = Math.floor(Math.random() * ((window.innerWidth * 1.5) + Math.random() * 100));
+    entity.y = Math.floor(Math.random() * ((window.innerHeight * 1.5) + Math.random() * 100));
+    if (Math.random() < 0.5) {
+      entity.value = "Hello World";
+    } else {
+      entity.value = Math.floor(Math.random() * 100);
+    }
+    this.layers[1].push(JSON.parse(JSON.stringify(entity)));
+  };
+
+  this.rescale();
+
+  this.resize();
 
   return void 0;
 
