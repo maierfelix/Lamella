@@ -386,14 +386,19 @@ CORE.Grid.prototype.getDevicePlatform = function() {
 
 /**
  * Stress test
- * @param {Number} n
+ * @param {Number}  n
+ * @param {Boolean} con
  * @method stressTest
  */
-CORE.Grid.prototype.stressTest = function(n) {
+CORE.Grid.prototype.stressTest = function(n, con, singleCon) {
 
   n = n || 100;
 
-  var ii = 0;
+  con = con || false;
+  singleCon = singleCon || false;
+
+  var ii  = 0;
+  var len = 0;
 
   var entity = {
     id: 0,
@@ -407,10 +412,27 @@ CORE.Grid.prototype.stressTest = function(n) {
     connections: []
   };
 
+  ii = 0;
+  len = this.layers[1].length;
+
+  for (; ii < len; ++ii) {
+    this.layers[1][ii] = void 0;
+    this.layers[1][ii] = null;
+  };
+
+  this.layers[1].length = 0;
   this.layers[1] = [];
 
   for (ii = 0; ii < n; ++ii) {
     entity.id = ii;
+    entity.connections = [];
+    if (con && Math.random() < 0.25) {
+      entity.connections.push({
+        anchor_1: 0,
+        anchor_2: 0,
+        id: singleCon ? 1 : ii - 1
+      });
+    }
     entity.x = Math.floor(Math.random() * ((window.innerWidth * 1.5) + Math.random() * 100));
     entity.y = Math.floor(Math.random() * ((window.innerHeight * 1.5) + Math.random() * 100));
     if (Math.random() < 0.5) {
