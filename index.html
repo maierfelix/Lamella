@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Lamella Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lamella">
+  <link rel="stylesheet" type="text/css" href="vendor/css/main.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/scene.css">
+</head>
+<body>
+
+  <div id="progress-logo" class="button-logo">
+    <div class="logo">LAMELLA</div>
+  </div>
+
+  <div id="progress-container">
+    <div id="progress-bar">
+      <div id="progress-value" class="gradient"></div>
+    </div>
+  </div>
+
+  <div id="fps" class="text" style="display:none;">FPS: 0.0</div>
+  <div id="entityAmount" class="text"></div>
+  <div id="currentLayer" class="text"></div>
+
+  <nav id="nav" class="appBar appBar--bottom" style="opacity: 0;">
+    <section class="appBar__actionArea">
+      <button id="play" class="appBar__command">
+        <i scene="Settings" class="ton-li-music-play"></i>
+      </button>
+      <button id="add" class="appBar__command">
+        <i scene="Add" class="ton-li-plus"></i>
+      </button>
+      <button id="settings" class="appBar__command">
+        <i scene="Settings" class="ton-li-gear"></i>
+      </button>
+    </section>
+  </nav>
+
+  <div id="currentScene" style="opacity: 0;"></div>
+
+  <canvas id="main" draggable="false" style="opacity: 0;"></canvas>
+
+  <!--<script>
+    javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+  </script>-->
+
+  <script type="text/javascript" src="./vendor/libs/import.js"></script>
+  <script type="text/javascript" src="./init.js"></script>
+
+</body>
+</html>

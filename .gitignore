@@ -1,0 +1,11 @@
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.bat
+*.sh
+
+compiler.php
+server
+server/config.json
+server/server.go
