@@ -643,7 +643,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 48,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: -277,
       y: 136,
       connections: [
@@ -657,7 +657,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 32,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: 218.5,
       y: 136,
       connections: [
@@ -670,7 +670,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 55,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: 714,
       y: 136,
       connections: [
@@ -684,7 +684,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 64,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: -277,
       y: -334,
       connections: [
@@ -698,7 +698,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 32,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: 714,
       y: -334,
       connections: [
@@ -714,7 +714,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 32,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: 218.5,
       y: -334
     },
@@ -724,7 +724,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 32,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: -277,
       y: -99
     },
@@ -734,7 +734,7 @@ CORE.Grid.prototype.generateEntities = function() {
       height: 32,
       color: "#7becb4",
       radialGradient: "rgba(0,0,0,0)",
-      model: "Neuron",
+      model: "DataType",
       x: 714,
       y: -99
     }
@@ -765,7 +765,7 @@ CORE.Grid.prototype.generateEntities = function() {
       width: 32,
       height: 32,
       color: "#be7bee",
-      model: "Neuron",
+      model: "DataType",
       x: 256,
       y: 128,
       connections: [4]
@@ -775,7 +775,7 @@ CORE.Grid.prototype.generateEntities = function() {
       width: 44,
       height: 44,
       color: "#be7bee",
-      model: "Neuron",
+      model: "DataType",
       x: 321,
       y: -166,
       connections: []
